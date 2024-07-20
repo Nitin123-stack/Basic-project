@@ -1,0 +1,168 @@
+<style>
+.logo{
+    display: flex;
+     justify-content: start;
+}
+.logo img{
+    height: 54px;
+    
+}
+nav{
+    display: flex;
+     justify-content: space-around; 
+     align-items: center;
+}   
+
+.right ul{
+    display: flex;
+    gap: 34px;
+    font-family: 'Segoe UI';
+        }
+.right ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+  
+}
+.right ul li span {
+    padding: 0 9px;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    margin: 70px;
+    font-family: sans-serif;
+
+
+}
+.first span{
+    font-size: 40px;
+     
+}
+.first p{
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    width: 40vw;
+    text-align: center;
+    
+
+}
+.first button{
+ background: #00b6d1;
+ padding: 14px 16px;
+ color: white;
+ border: none;
+ border-radius: 6px;
+ font-weight: 700;
+ margin: 12px 0;
+ cursor: pointer;
+}
+
+ 
+
+.second{
+    max-width: 70vw;
+    margin: auto;
+
+
+}
+.small{
+font-size: 12px;
+}
+
+.btn{
+background-color:#5cb85c;
+border-radius: 12px;
+padding: 8px;
+margin: 12px 0;
+color: white;
+font-weight: 500;
+text-align: center;
+font-family: 'Segoe UI';
+
+
+}
+
+.item-lang{
+    display: grid;
+    align-items: center;
+    padding: 21px 24px;
+    margin-left: 22px;
+    
+}
+.btn{
+    background-color: #00b6d1;
+    padding: 14px 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    margin: 12px 0;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.green{
+    background-color: #5cb85c;
+
+}
+.flex{
+    display: flex;
+
+}
+.small{
+    max-width: 50vw;
+    margin: auto;
+}
+.item{
+    background-color: #f9f9f9;
+    padding: 23px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    text-align: center;
+    
+
+}
+.item-lang{
+   font-weight: 700;
+   text-align: center;
+   padding-bottom: 36px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    
+
+}
+.download :nth-child(2){
+    font-size: 23px;
+}
+.download{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: sans-serif;
+}
+.download img{
+    padding: 0px 12px;
+}
+@media screen and (max-width: 1145px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+
+
+
+</style>
