@@ -1,0 +1,68 @@
+def display_menu():
+    print("\n--- To-Do List Menu ---")
+    print("1. Add Task")
+    print("2. Mark Task as Completed")
+    print("3. Delete Task")
+    print("4. Show All Tasks")
+    print("5. Exit")
+
+def add_task(tasks):
+    task = input("Enter the task description: ")
+    tasks.append({'description': task, 'completed': False})
+    print(f"Task added: {task}")
+
+def mark_task_completed(tasks):
+    show_tasks(tasks)
+    try:
+        task_id = int(input("Enter the task number to mark as completed: ")) - 1
+        if 0 <= task_id < len(tasks):
+            tasks[task_id]['completed'] = True
+            print(f"Task {task_id + 1} marked as completed.")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+def delete_task(tasks):
+    show_tasks(tasks)
+    try:
+        task_id = int(input("Enter the task number to delete: ")) - 1
+        if 0 <= task_id < len(tasks):
+            removed_task = tasks.pop(task_id)
+            print(f"Task deleted: {removed_task['description']}")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+def show_tasks(tasks):
+    if not tasks:
+        print("No tasks available.")
+    else:
+        print("\n--- Task List ---")
+        for index, task in enumerate(tasks, start=1):
+            status = "Completed" if task['completed'] else "Pending"
+            print(f"{index}. {task['description']} [{status}]")
+
+def main():
+    tasks = []
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+        
+        if choice == '1':
+            add_task(tasks)
+        elif choice == '2':
+            mark_task_completed(tasks)
+        elif choice == '3':
+            delete_task(tasks)
+        elif choice == '4':
+            show_tasks(tasks)
+        elif choice == '5':
+            print("Exiting. Thank you for using the To-Do List application.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
